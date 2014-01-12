@@ -2,10 +2,10 @@
 
 require "spec_helper"
 
-describe ScopeComposer::ScopeComposer do
+describe Scoping::ScopeComposer do
   describe "#all" do
     let(:scope) { double "Scope" }
-    subject { ScopeComposer::ScopeComposer.new scope, table }
+    subject { Scoping::ScopeComposer.new scope, table }
 
     context 'given criteria table' do
       let(:table) { { a: '1', b: '2', c: '3' } }
@@ -29,7 +29,7 @@ describe ScopeComposer::ScopeComposer do
 
   describe "#count" do
     let(:scope) { double "Scope" }
-    subject { ScopeComposer::ScopeComposer.new scope, table }
+    subject { Scoping::ScopeComposer.new scope, table }
 
     context 'given criteria table' do
       let(:table) { { a: '1', b: '2', c: '3' } }
@@ -55,7 +55,7 @@ describe ScopeComposer::ScopeComposer do
 
   describe "#paginate" do
     let(:scope) { double "Scope" }
-    subject { ScopeComposer::ScopeComposer.new scope, table }
+    subject { Scoping::ScopeComposer.new scope, table }
 
     context 'given criteria table' do
       let(:table) { { a: '1', b: '2', c: '3' } }

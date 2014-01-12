@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'scope_composer/version'
+require 'scoping/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "scope_composer"
-  spec.version       = ScopeComposer::VERSION
+  spec.name          = "scoping"
+  spec.version       = Scoping::VERSION
   spec.authors       = ["Jiří Zajpt"]
   spec.email         = ["jzajpt@blueberry.cz"]
-  spec.summary       = %q{ScopeComposer is utility gem for AR composing scopes}
+  spec.summary       = %q{Scoping is utility gem for AR composing scopes}
   spec.homepage      = ""
   spec.license       = "MIT"
 

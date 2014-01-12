@@ -1,4 +1,4 @@
-require File.expand_path('../../lib/scope_composer', __FILE__)
+require File.expand_path('../../lib/scoping', __FILE__)
 require 'rspec/autorun'
 
 RSpec.configure do |config|

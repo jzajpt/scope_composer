@@ -35,7 +35,7 @@ require 'active_support/core_ext/object'
 #
 #     ScopeComposer.new(Challenge, accepted: "1")
 #
-module ScopeComposer
+module Scoping
   class ScopeComposer < OpenStruct
 
     # Initialize new instance with given scope and criteria table.
