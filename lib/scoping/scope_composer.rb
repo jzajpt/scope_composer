@@ -111,7 +111,7 @@ module Scoping
     # @param [String] field
     # @param [Object] value
     def apply_field_on_current_scope(field, value)
-      arity = @base_scope.method(field).arity
+      arity = arity_for(field)
       if arity == 0
         if value == "1" || value == true
           @current_scope = @current_scope.public_send field
@@ -119,6 +119,17 @@ module Scoping
       else
         @current_scope = @current_scope.public_send field, value
       end
+    end
+
+    # Returns arity for given scope.
+    #
+    # @return [Fixnum]
+    def arity_for(scope)
+      if @base_scope.respond_to?(:klass)
+        @base_scope.klass
+      else
+        @base_scope
+      end.method(field).arity
     end
 
     # Return the filter fields.
