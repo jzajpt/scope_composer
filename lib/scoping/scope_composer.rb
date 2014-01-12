@@ -129,7 +129,7 @@ module Scoping
         @base_scope.klass
       else
         @base_scope
-      end.method(field).arity
+      end.method(scope).arity
     end
 
     # Return the filter fields.
